@@ -1,0 +1,5 @@
+package com.oneapm.iterator;
+
+public interface Iterator {
+
+}

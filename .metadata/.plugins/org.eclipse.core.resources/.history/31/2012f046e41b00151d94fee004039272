@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+
+public class MyArrayList<E> {
+
+	
+	private List<E> list = new ArrayList<E> () ;
+	private int size ;
+	
+	public MyArrayList(){}
+	
+	public MyArrayList(Collection<E> collection)
+	{
+		list.addAll(collection) ;
+		size = list.size() ;
+	}
+	
+	public void add(E obj)
+	{
+		list.add(obj) ;
+		++size ;
+	}
+	
+	public void remove(int index)
+	{
+		if(index < 0 || index >= list.size())
+			throw new IndexOutOfBoundsException() ;
+		list.remove(index) ;
+		--size ;
+	}
+	
+	public Iterator<E> iterator()
+	{
+		return  new Ite() ;
+	}
+	
+	private class Ite implements Iterator<E>
+	{
+		
+	}
+}

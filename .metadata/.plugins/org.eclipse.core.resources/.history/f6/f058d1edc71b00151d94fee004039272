@@ -1,0 +1,33 @@
+package com.oneapm.fileTest;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileTest {
+	
+	public static void test() throws FileNotFoundException
+	{
+		FileInputStream reader = new FileInputStream("d:\\src.jpg") ;
+		FileOutputStream writer = new FileOutputStream("d:\\dest.jpg") ;
+		int readNumber ;
+		byte []text = new byte[4096] ;
+		try {
+			while(  (readNumber = reader.read(text) ) != -1)
+			{
+				writer.write(text, 0, readNumber);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void main(String []args)
+	{
+		
+	}
+
+}

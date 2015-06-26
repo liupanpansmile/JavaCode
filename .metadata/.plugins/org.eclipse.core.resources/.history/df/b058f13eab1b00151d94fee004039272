@@ -1,0 +1,21 @@
+package com.oneapm.srcCodeTest;
+
+public class ThreadSrcCodeTest {
+
+	public static void Test()
+	{
+		LiftOff liftOff = new LiftOff() ;
+		Thread launch = new Thread(liftOff) ;
+		System.out.println( launch.getName() );
+		
+		launch.start();
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+	}
+
+}

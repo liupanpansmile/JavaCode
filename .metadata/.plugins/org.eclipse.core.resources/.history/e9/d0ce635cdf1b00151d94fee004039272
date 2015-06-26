@@ -1,0 +1,26 @@
+package com.oneapm.iterator;
+
+public class BookListIterator implements Iterator {
+
+	private int index  = 0;
+	private BookList bookList =null ;
+	
+	public BookListIterator(BookList bookList) {
+		this.bookList = bookList ;
+	}
+	
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		return index < bookList.size();
+	}
+
+	@Override
+	public Object next() {
+		// TODO Auto-generated method stub
+		Object obj = bookList.getBook(index) ;
+		++index ;
+		return obj ;
+	}
+
+}

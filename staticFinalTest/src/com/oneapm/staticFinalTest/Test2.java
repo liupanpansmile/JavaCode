@@ -15,7 +15,7 @@ public class Test2 {
 		t.func() ;
 		t.setValue(10); 
 		
-		System.out.println("var = " + var);
+		
 	}
 	
 	public Test2()

@@ -1,0 +1,10 @@
+package com.oneapm.lockTest;
+
+public class LockTest {
+	
+	public static void main(String []args)
+	{
+		
+	}
+
+}

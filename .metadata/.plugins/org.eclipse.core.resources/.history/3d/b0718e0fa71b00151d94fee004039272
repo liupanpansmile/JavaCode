@@ -1,0 +1,12 @@
+package com.oneapm.srcCodeTest;
+
+public class ThreadSrcCodeTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Thread.sleep(-1, 0);
+	}
+
+}

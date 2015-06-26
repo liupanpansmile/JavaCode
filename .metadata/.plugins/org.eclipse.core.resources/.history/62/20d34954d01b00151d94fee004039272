@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+
+public class CollectionTest {
+
+	public static void Test()
+	{
+		Collection<Integer> collection = new ArrayList<Integer>() ;
+		
+		for(int i = 1 ;i < 10 ;++i)
+		{
+			collection.add(i) ;
+		}
+		
+		for(int value:collection)
+		{
+			System.out.println(value);
+		}
+	}
+	
+	public static void Test2()
+	{
+		int []iArr = new int[]{ 1,2,3,4} ;
+		List<int[]> intList = Arrays.asList(iArr ) ;
+		
+		System.out.println(intList.size());
+		for(int i = 0 ;i < intList.size() ;++i)
+		{
+			int []iArr1 = intList.get(i) ;
+			
+			for(int i:iArr1)
+			{
+				System.out.print(i + "\t");
+			}
+			
+		}
+//		for(int value : iArr)
+//		{
+//			System.out.println(value);
+//		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Test2() ;
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.oneapm.srcCodeTest;
+
+public class LiftOff implements Runnable {
+
+	private static int countDown = 10 ;
+	private static int countTask = 0 ;
+	private final int id = ++countTask ;
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

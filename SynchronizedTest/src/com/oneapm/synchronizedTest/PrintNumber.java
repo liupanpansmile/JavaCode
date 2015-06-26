@@ -1,0 +1,22 @@
+package com.oneapm.synchronizedTest;
+
+public class PrintNumber implements Runnable {
+
+	private int id ;
+	public PrintNumber(int id)
+	{
+		this.id = id ;
+	}
+	
+	@Override
+	public synchronized void run() {
+		// TODO Auto-generated method stub
+
+		for(int i =1 ; i < 10000 ;++i)
+		{
+			System.out.println("thread-"+id+ ": "+i);
+			
+		}
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.oneapm.iterator;
+
+public class IteratorTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		BookList list = new BookList() ;
+		
+		list.addBook(new Book("novel"));
+		list.addBook(new Book("Chinese"));
+		list.addBook(new Book("English"));
+		
+		Iterator iterator = list.iterator() ;
+		
+		while(iterator.hasNext())
+		{
+			System.out.println( ((Book)iterator.next()).getName());
+		}
+		
+	}
+
+}

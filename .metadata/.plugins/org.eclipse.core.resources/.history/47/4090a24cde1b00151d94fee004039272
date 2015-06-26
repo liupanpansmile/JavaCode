@@ -1,0 +1,17 @@
+package com.oneapm.iterator;
+
+public class BookListIterator implements Iterator {
+
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object next() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

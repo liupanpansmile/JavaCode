@@ -1,0 +1,30 @@
+package com.oneapm.synchronizedTest;
+
+public class TestSynchronized {
+
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		// 1
+//		for(int i = 1;i < 10 ;++i )
+//		{
+//			new Thread(new PrintNumber(i)).start()  ;
+//			//Thread.sleep(100);
+//		}
+		
+		
+		//2
+		
+		String lock ="lock" ;
+		for(int i = 1;i < 10 ;++i )
+		{
+			new Thread(new PrintNumber2(i,lock)).start()  ;
+			
+		}
+		
+	}
+
+}

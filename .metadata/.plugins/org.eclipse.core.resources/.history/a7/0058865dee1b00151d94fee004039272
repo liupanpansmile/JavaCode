@@ -1,0 +1,32 @@
+package com.oneapm.synchronizedTest;
+
+package com.oneapm.synchronizedTest;
+
+public class PrintNumber3 implements Runnable {
+
+	private int id ;
+	public PrintNumber2(int id)
+	{
+		this.id = id ;
+		this.lock = lock ;
+	}
+	
+	@Override
+	public  void run() {
+
+		
+		
+	}
+	
+	private static synchronized void count()
+	{
+		
+			for(int i =1 ; i < 10000 ;++i)
+			{
+				System.out.println("thread-"+id+ ": "+i);
+				
+			}
+	}
+
+}
+

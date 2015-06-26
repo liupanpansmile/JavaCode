@@ -1,0 +1,59 @@
+package com.oneapm.lockTest;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class BoundedBuffer {
+	
+	/*Lock*/
+	private Lock lock = new ReentrantLock() ;
+	private final Condition notFull = lock.newCondition() ;
+	private final Condition notEmpty = lock.newCondition() ;
+	
+	private char[]data = new char[10] ;
+	private int count = 0 ;
+	
+	public void put(char c)
+	{
+		lock.lock();
+		while(count == data.length-1)
+		{
+			try {
+				notFull.await();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		notFull.signal();
+		data[count++] = c ;
+		System.out.println("Put:" + c);
+		lock.unlock();
+	}
+	
+	public char get()
+	{
+		char c ;
+		lock.unlock();
+		while(count == 0)
+		{
+			try {
+				notEmpty.await();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		notEmpty.signal(); 
+		c = data[count] ;
+		--count ;
+		System.out.println("Get:" + c);
+		lock.unlock();
+		return c ;
+	}
+	
+	
+	
+
+}
