@@ -1,0 +1,11 @@
+package com.oneapm.staticFinalTest;
+
+public class Test {
+	
+	
+	public Test()
+	{
+		System.out.println("Construction Called !");
+	}
+
+}
